@@ -1,0 +1,15 @@
+# Nginx配置（/etc/nginx/conf.d/hellowangzhan.conf）
+server {
+  listen 80;
+  server_name www.daidaimao.com;
+
+  location / {
+    root /path/to/hellowangzhan/build;  # React构建输出目录
+    try_files $uri /index.html;
+  }
+
+  location /api/ {
+    proxy_pass http://localhost:3001/;  # 反向代理到Node.js后端
+    proxy_set_header Host $host;
+  }
+}

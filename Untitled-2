@@ -1,0 +1,20 @@
+/Users/xiaofengyoushijian/Desktop/hellowangzhan/
+├─ public/                 # 静态资源（原web目录内容迁移至此）
+│  ├─ images/              # 轮播图/banner图片
+│  └─ favicon.ico          # 网站图标
+├─ src/                    # React核心代码
+│  ├─ components/          # 公共组件
+│  │  ├─ Carousel/         # 轮播图组件
+│  │  └─ OrderForm/        # 订单表单组件
+│  ├─ pages/               # 页面路由
+│  │  ├─ Home.tsx          # 首页
+│  │  └─ OrderStats.tsx    # 订单统计页
+│  ├─ services/            # API服务
+│  │  └─ order.ts          # 订单接口封装
+│  ├─ styles/              # 全局样式（含Sass变量）
+│  │  └─ variables.scss    # 企业色/字体等变量
+│  └─ utils/               # 工具函数
+└─ server/                 # 后端服务（Node.js+Express）
+   ├─ app.js               # 主入口
+   ├─ routes/              # API路由
+   └─ models/              # 数据库模型（MongoDB）

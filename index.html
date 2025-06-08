@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代代猫公司官网</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="#intro">企业形象</a>
+        <a href="#order">订单统计</a>
+        <a href="#course">教育课程</a>
+        <a href="#forum">需求社区</a>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="banner-slider">
+        <div class="slider-container">
+            <img src="images/banner1.jpg" alt="代代猫科技-AI教育" class="slider-img">
+            <img src="images/banner2.jpg" alt="代代猫科技-企业服务" class="slider-img">
+            <img src="images/banner3.jpg" alt="代代猫科技-课程体系" class="slider-img">
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- 1. 企业形象展示 -->
+    <section id="intro" class="section">
+        <h2>关于代代猫</h2>
+        <div class="intro-content">
+            <p>代代猫科技是一家专注于AI教育领域的创新企业，致力于为用户提供高质量的教育服务和技术解决方案。我们拥有一支经验丰富的专业团队，结合先进的AI技术，为客户打造个性化的学习体验。</p>
+            <div class="vision">
+                <h3>企业愿景</h3>
+                <p>成为全球领先的AI教育服务提供商，让每个人都能享受到优质的教育资源</p>
+            </div>
+            <div class="company-stats">
+                <div class="stat-item">
+                    <h4>10+</h4>
+                    <p>年行业经验</p>
+                </div>
+                <div class="stat-item">
+                    <h4>1000+</h4>
+                    <p>企业客户</p>
+                </div>
+                <div class="stat-item">
+                    <h4>50000+</h4>
+                    <p>学员数量</p>
+                </div>
+                <div class="stat-item">
+                    <h4>98%</h4>
+                    <p>客户满意度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 订单业绩管理 -->
+    <section id="order" class="section">
+        <h2>订单统计</h2>
+        <div class="order-container">
+            <form id="orderForm" class="order-form">
+                <input type="text" placeholder="订单编号" id="orderId" required>
+                <input type="number" placeholder="订单金额" id="orderAmount" required>
+                <input type="date" id="orderDate" required>
+                <select id="orderStatus" required>
+                    <option value="未处理">未处理</option>
+                    <option value="处理中">处理中</option>
+                    <option value="已完成">已完成</option>
+                </select>
+                <input type="number" placeholder="进度百分比(0-100)" id="orderProgress" min="0" max="100" required>
+                <button type="submit">添加订单</button>
+            </form>
+            <div class="stats">
+                <div class="stat-summary">
+                    <p>总订单数：<span id="totalOrders">0</span></p>
+                    <p>总金额：<span id="totalAmount">0</span> 元</p>
+                </div>
+                <div class="stat-charts">
+                    <!-- 图表将通过JavaScript动态添加 -->
+                </div>
+            </div>
+            <div id="orderList" class="order-list"></div>
+        </div>
+    </section>
+
+    <!-- 3. 教育课程展示 -->
+    <section id="course" class="section">
+        <h2>代代猫教育课程</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <h3>Excel企业数据分析教程</h3>
+                <p>涵盖数据清洗、函数应用、数据透视表、动态图表制作等企业级应用技能，助您成为数据分析专家。</p>
+                <div class="course-meta">
+                    <span>课时：30节</span>
+                    <span>价格：1299元</span>
+                </div>
+            </div>
+            <div class="course-card">
+                <h3>SPSS问卷数据教程</h3>
+                <p>从问卷设计到数据录入，详解T检验、方差分析、信效度检验等核心统计方法，让您轻松掌握数据分析。</p>
+                <div class="course-meta">
+                    <span>课时：25节</span>
+                    <span>价格：1199元</span>
+                </div>
+            </div>
+            <div class="course-card">
+                <h3>AMOS分析+SEM结构方程模型</h3>
+                <p>聚焦结构方程模型构建，包含验证性因子分析、路径分析、模型修正等实战内容，提升研究能力。</p>
+                <div class="course-meta">
+                    <span>课时：28节</span>
+                    <span>价格：1499元</span>
+                </div>
+            </div>
+            <div class="course-card">
+                <h3>问卷调查报告与护理专项分析</h3>
+                <p>针对护理领域问卷数据，讲解描述性统计、相关性分析、回归模型等专项技术，助力专业发展。</p>
+                <div class="course-meta">
+                    <span>课时：22节</span>
+                    <span>价格：1099元</span>
+                </div>
+            </div>
+            <div class="course-card">
+                <h3>旅游扎根法+SNS社会化分析</h3>
+                <p>结合Nvivo工具，教授扎根理论编码、SNS数据挖掘、情感分析等旅游研究方法，开拓研究视野。</p>
+                <div class="course-meta">
+                    <span>课时：26节</span>
+                    <span>价格：1399元</span>
+                </div>
+            </div>
+            <div class="course-card">
+                <h3>CiteSpace+Bicomb文献共现分析</h3>
+                <p>掌握文献计量工具使用，包括关键词共现、作者合作网络、研究热点追踪等技能，提升学术水平。</p>
+                <div class="course-meta">
+                    <span>课时：24节</span>
+                    <span>价格：1299元</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 需求社区 -->
+    <section id="forum" class="section">
+        <h2>需求与反馈</h2>
+        <div class="forum-container">
+            <div id="postList" class="post-list"></div>
+            <form id="postForm" class="post-form">
+                <input type="text" placeholder="帖子标题" id="postTitle" required>
+                <textarea placeholder="问题描述" id="postContent" required></textarea>
+                <button type="submit">发布新帖</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

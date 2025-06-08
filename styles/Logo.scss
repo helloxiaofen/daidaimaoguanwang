@@ -1,0 +1,18 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  .logo-text {
+    background: linear-gradient(45deg, #2196F3, #673AB7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textFlow 5s linear infinite;
+    
+    @keyframes textFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  }
+}
